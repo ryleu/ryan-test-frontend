@@ -248,7 +248,11 @@ function applyForecast(forecast) {
 
 window.addEventListener('load', function () {
     navigator.geolocation.getCurrentPosition((pos) => {
-        getForecast(pos).then((value) => applyForecast(value));
+        const coords = {
+            lat: pos.coords.latitude,
+            lon: pos.coords.longitude
+        }
+        getForecast(coords).then((value) => applyForecast(value));
     });
 
     locationModeSelect = document.getElementById("location-mode");
