@@ -1,0 +1,103 @@
+:root {
+    font-family: 'Helvetica', sans-serif;
+
+    --foreground: #110F0F;
+    --accent: #E0DDD1;
+    --selected: #CBC7B3;
+    --background: #EFEDE7;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+h1 {
+    text-align: center;
+}
+
+button, select, input, #auto-mode {
+    background-color: var(--accent);
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--selected);
+    border-width: 2px;
+    height: 40px;
+    margin: 5px;
+    font-size: 1.2rem;
+}
+
+input {
+    height: 34px;
+}
+
+.selected-button {
+    background-color: var(--selected);
+}
+
+#main-holder {
+    display: flex;
+    justify-content: center;
+}
+
+#main {
+    max-width: min(90%, 800px);
+    flex-grow: 1;
+}
+
+.row-flexbox {
+    display: flex;
+    flex-direction: row;
+}
+
+.col-flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexitem {
+    flex-grow: 1;
+}
+
+.hidden {
+    display: none;
+    visibility: collapse;
+}
+
+#location-mode {
+    max-width: 170px;
+}
+
+#get-weather, #state {
+    max-width: 150px;
+}
+
+#auto-mode {
+    height: 36px;
+    justify-content: center;
+}
+
+#auto-location {
+    padding: 1 4 1 4;
+    border-width: 2;
+    margin: 0;
+    text-align: center !important;
+}
+
+thead, tbody {
+    text-align: left;
+}
+
+thead {
+    background-color: var(--accent);
+}
+
+#forecast {
+    display: flex;
+}
+
+table {
+    flex-grow: 1;
+}
+
+table, tr, td {
+    border: 2px solid var(--selected);
+    border-collapse: collapse;
+}
